@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box !important;
+  list-style: none;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Alata";
+}
+
+#topSection {
+  color: white;
+  min-height: 600px;
+  height: 70vh;
+  background-image: url(../images/desktop/image-hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#topSection #mainTitle {
+  border: solid 2px white;
+}
+
+#topSection h2 {
+  font-family: 'Josefin Sans';
+  font-weight: 200;
+  font-size: 100px;
+  padding: 20px;
+}
+
+#topSection header {
+  padding-top: 4vh;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#topSection header h1 {
+  font-size: 42px;
+  margin: 6px;
+}
+
+#topSection header ul li {
+  float: left;
+}
+
+#topSection header ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 0 16px;
+}
+
+#topSection header ul li a:hover::after {
+  content: "";
+  width: 700px;
+  height: 5px;
+  position: relative;
+  left: -20%;
+  top: 5px;
+  border-width: 0 0 5px;
+  border-style: solid;
+}
+
+#middleSection {
+  height: 210vh;
+}
+
+#bottomSection {
+  color: white;
+  background-color: black;
+  height: 30vh;
+}
