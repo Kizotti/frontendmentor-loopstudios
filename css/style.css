@@ -9,7 +9,22 @@
   list-style: none;
   list-style-type: none;
   text-decoration: none;
-  font-family: "Alata";
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#topSection:before {
+  content: "\A";
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 70vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.55);
 }
 
 #topSection {
@@ -20,24 +35,40 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: "Alata";
+}
+
+#topSection > div:first-child {
+  margin: 0 15vw;
 }
 
 #topSection #mainTitle {
+  display: flex;
+  position: relative;
   border: solid 2px white;
+  width: 35vmax;
+  margin-top: 8vh;
 }
 
-#topSection h2 {
-  font-family: 'Josefin Sans';
-  font-weight: 200;
-  font-size: 100px;
-  padding: 20px;
-}
-
-#topSection header {
-  padding-top: 4vh;
+#topSection #mainAccueil {
   position: relative;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+
+#topSection h2 {
+  font-family: "Josefin Sans";
+  font-weight: 200;
+  font-size: 4vmax;
+  padding: 2vmax;
+}
+
+#topSection header {
+  padding-top: 7vh;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -68,11 +99,134 @@
   border-style: solid;
 }
 
-#middleSection {
+#bottomSection {
   height: 210vh;
+  font-family: "Josefin Sans" !important;
 }
 
-#bottomSection {
+#bottomSection section {
+  margin: 15vh 15vw;
+}
+
+#bottomSection section:first-child > div {
+  display: flex;
+  position: relative;
+  left: +8vw;
+}
+
+#bottomSection h3 {
+  font-weight: 200;
+  font-size: 40px;
+}
+
+#bottomSection h4 {
+  font-weight: 200;
+  font-size: 40px;
+}
+
+#bottomSection #catchtext {
+  padding: 60px;
+  background-color: white;
+  align-self: flex-end;
+  position: relative;
+  left: -8vw;
+}
+
+#bottomSection #catchtext div {
+  width: 20vw;
+}
+
+#bottomSection #catchtext h3 {
+  text-align: center;
+}
+
+#bottomSection #catchtext p {
+  font-family: "Alata";
+}
+
+#bottomSection #creationsTitle {
+  display: flex;
+  justify-content: space-around;
+}
+
+#bottomSection #creationsTitle a {
+  display: flex;
+  align-items: center;
+  border: solid 1px black;
+  padding: 10px;
+}
+
+#bottomSection #creationsTitle a:hover {
+  color: white;
+  background-color: black;
+}
+
+#bottomSection #creationsList {
+  margin-top: 5vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#bottomSection #creationsList div {
+  position: relative;
+  top: -100px;
+  left: +40px;
+  font-size: 30px;
+  color: white;
+  font-family: "Josefin Sans" !important;
+  font-weight: 200;
+}
+
+#bottomSection #creationsList .thumbnail {
+  position: relative;
+  height: 450px;
+  width: 256px;
+  margin: 20px;
+}
+
+#bottomSection #creationsList .thumbnail:hover div {
+  z-index: 5;
+  color: black;
+}
+
+#bottomSection #creationsList .thumbnail img {
+  width: 100%;
+  vertical-align: top;
+}
+
+#bottomSection #creationsList .thumbnail img:hover {
+  transform: scale(1.5);
+}
+
+#bottomSection #creationsList .thumbnail:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgba(2, 0, 36, 0) 0%, rgba(0, 0, 0, 0.33237) 57%, black 100%);
+}
+
+#bottomSection #creationsList .thumbnail:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.6);
+  opacity: 0;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+#bottomSection #creationsList .thumbnail:hover:after {
+  opacity: 1;
+}
+
+footer {
   color: white;
   background-color: black;
   height: 30vh;

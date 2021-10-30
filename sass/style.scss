@@ -1,91 +1,240 @@
-@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 *,
 *::before,
 *::after {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box !important;
-	list-style: none;
-	list-style-type: none;
-	text-decoration: none;
-	font-family: "Alata";
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box !important;
+  list-style: none;
+  list-style-type: none;
+  text-decoration: none;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
 
+#topSection:before {
+  content: "\A";
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 70vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
 #topSection {
-	color: white;
-	min-height: 600px;
-	height: 70vh;
-	background-image: url(../images/desktop/image-hero.jpg);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+  color: white;
+  min-height: 600px;
+  height: 70vh;
+  background-image: url(../images/desktop/image-hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Alata";
 
-	#mainTitle {
-		border: solid 2px white;
-	}
+  & > div:first-child {
+    margin: 0 15vw;
+  }
 
-	h2 {
-		font-family: 'Josefin Sans';
-		font-weight: 200;
-		font-size: 100px;
-		padding: 20px;
-	}
+  #mainTitle {
+    display: flex;
+    position: relative;
+    border: solid 2px white;
+    width: 35vmax;
+    margin-top: 8vh;
 
-	header {		
-		padding-top: 4vh;
-		position: relative;
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
+  }
 
-		h1 {
-			font-size: 42px;
-			margin: 6px;
-		}
+  #mainAccueil {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 
-		ul {
+  h2 {
+    font-family: "Josefin Sans";
+    font-weight: 200;
+    font-size: 4vmax;
+    padding: 2vmax;
+  }
 
-			li {
-				float: left;
+  header {
+    padding-top: 7vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-				a {
-					display: block;
-					color: white;
-					text-align: center;
-					padding: 0 16px;
-				}
+    h1 {
+      font-size: 42px;
+      margin: 6px;
+    }
 
-				a:hover {
+    ul {
+      li {
+        float: left;
 
-					&::after {
-						content: "";
+        a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 0 16px;
+        }
 
-						width: 700px;
-						height: 5px;
-						position: relative;
-						left: -20%;
-						top: 5px;
-						border-width: 0 0 5px;
-						border-style: solid;
-					}
-				
-				}
-			}
-		}
-	}
-	
+        a:hover {
+          &::after {
+            content: "";
 
-}
-
-#middleSection {
-	height: 210vh;
+            width: 700px;
+            height: 5px;
+            position: relative;
+            left: -20%;
+            top: 5px;
+            border-width: 0 0 5px;
+            border-style: solid;
+          }
+        }
+      }
+    }
+  }
 }
 
 #bottomSection {
-	color: white;
-	background-color: black;
-	height: 30vh;
+  height: 210vh;
+  font-family: "Josefin Sans" !important;
+
+  section {
+    margin: 15vh 15vw;
+  }
+
+  section:first-child > div {
+    display: flex;
+    position: relative;
+    left: +8vw;
+  }
+
+  h3 {
+    font-weight: 200;
+    font-size: 40px;
+  }
+
+  h4 {
+    font-weight: 200;
+    font-size: 40px;
+  }
+
+  #catchtext {
+    padding: 60px;
+    background-color: white;
+    align-self: flex-end;
+    position: relative;
+    left: -8vw;
+  }
+
+  #catchtext div {
+    width: 20vw;
+  }
+
+  #catchtext h3 {
+    text-align: center;
+  }
+
+  #catchtext p {
+    font-family: "Alata";
+  }
+
+  #creationsTitle {
+    display: flex;
+    justify-content: space-around;
+
+    a {
+      display: flex;
+      align-items: center;
+      border: solid 1px black;
+      padding: 10px;
+    }
+
+    a:hover {
+      color: white;
+      background-color: black;
+    }
+  }
+
+  #creationsList {
+    margin-top: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    div {
+      position: relative;
+      top: -100px;
+      left: +40px;
+      font-size: 30px;
+      color: white;
+      font-family: "Josefin Sans" !important;
+      font-weight: 200;
+    }
+
+    .thumbnail {
+      position: relative;
+      height: 450px;
+      width: 256px;
+      margin: 20px;
+    }
+
+    .thumbnail:hover div {
+      z-index: 5;
+      color: black;
+    }
+
+    .thumbnail img {
+      width: 100%;
+      vertical-align: top;
+
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+
+    .thumbnail:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(180deg, rgba(2,0,36,0) 0%, rgba(0,0,0,0.33237044817927175) 57%, rgba(0,0,0,1) 100%);
+      
+    }
+
+    .thumbnail:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(255, 255, 255, 0.6);
+      opacity: 0;
+      transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+    }
+
+    .thumbnail:hover:after {
+      opacity: 1;
+    }
+  }
+}
+
+footer {
+  color: white;
+  background-color: black;
+  height: 30vh;
 }
