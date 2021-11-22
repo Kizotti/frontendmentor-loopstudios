@@ -34,7 +34,7 @@ html {
 
 #topSection {
   color: white;
-  min-height: 600px;
+  min-height: 60rem;
   height: 70vh;
   background-image: url(../images/desktop/image-hero.jpg);
   background-position: center;
@@ -91,8 +91,8 @@ html {
 }
 
 #topSection header h1 {
-  font-size: 42px;
-  margin: 6px;
+  font-size: 4rem;
+  margin: .6rem;
 }
 
 #topSection header ul li {
@@ -103,17 +103,17 @@ html {
   display: block;
   color: white;
   text-align: center;
-  padding: 0 16px;
+  padding: 0 1.6rem;
 }
 
 #topSection header ul li a:hover::after {
   content: "";
-  width: 700px;
-  height: 5px;
+  width: 70rem;
+  height: .5rem;
   position: relative;
   left: -20%;
-  top: 5px;
-  border-width: 0 0 5px;
+  top: .5rem;
+  border-width: 0 0 .5rem;
   border-style: solid;
 }
 
@@ -143,16 +143,16 @@ html {
 
 #bottomSection h3 {
   font-weight: 200;
-  font-size: 40px;
+  font-size: 4rem;
 }
 
 #bottomSection h4 {
   font-weight: 200;
-  font-size: 40px;
+  font-size: 4rem;
 }
 
 #bottomSection #catchtext {
-  padding: 60px 0 0 60px;
+  padding: 6rem 0 0 6rem;
   background-color: white;
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -188,7 +188,7 @@ html {
       -ms-flex-align: center;
           align-items: center;
   border: solid 1px black;
-  padding: 10px;
+  padding: 1rem;
 }
 
 #bottomSection #creationsTitle a:hover {
@@ -210,9 +210,9 @@ html {
 
 #bottomSection #creationsList div {
   position: relative;
-  top: -100px;
-  left: +40px;
-  font-size: 30px;
+  top: -10rem;
+  left: 4rem;
+  font-size: 3rem;
   color: white;
   font-family: "Josefin Sans" !important;
   font-weight: 200;
