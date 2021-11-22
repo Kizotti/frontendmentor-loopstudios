@@ -17,6 +17,10 @@ a {
   color: black;
 }
 
+html {
+	font-size: 10px;
+}
+
 #topSection:before {
   content: "\A";
   position: absolute;
@@ -108,10 +112,15 @@ a {
 #bottomSection {
   height: 210vh;
   font-family: "Josefin Sans" !important;
+  padding: 15vh 15vw;
 
-  section {
-    margin: 15vh 15vw;
-  }
+
+	#history {
+		display: flex;
+    	justify-content: center;
+
+		margin: 10vh 0;
+	}
 
   section:first-child > div {
     display: flex;
@@ -130,7 +139,7 @@ a {
   }
 
   #catchtext {
-    padding: 60px;
+    padding: 60px 0 0 60px;
     background-color: white;
     align-self: flex-end;
     position: relative;
