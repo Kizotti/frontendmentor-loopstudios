@@ -18,7 +18,7 @@ a {
 }
 
 html {
-  font-size: 10px;
+  font-size: 100%;
 }
 
 #topSection:before {
@@ -34,7 +34,6 @@ html {
 
 #topSection {
   color: white;
-  min-height: 60rem;
   height: 70vh;
   background-image: url(../images/desktop/image-hero.jpg);
   background-position: center;
@@ -53,8 +52,13 @@ html {
   display: flex;
   position: relative;
   border: solid 2px white;
-  width: 35vmax;
+  width: 100%;
+  max-width: 650px;
   margin-top: 8vh;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 #topSection #mainAccueil {
@@ -72,7 +76,7 @@ html {
 #topSection h2 {
   font-family: "Josefin Sans";
   font-weight: 200;
-  font-size: 4vmax;
+  font-size: 4rem;
   padding: 2vmax;
 }
 
@@ -118,32 +122,20 @@ html {
 }
 
 #bottomSection {
-  height: 210vh;
   font-family: "Josefin Sans" !important;
-  padding: 15vh 15vw;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 #bottomSection #history {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 10vh 0;
-}
-
-#bottomSection section:first-child > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: relative;
-  left: +8vw;
+  margin: 7rem 0 7rem 0;
 }
 
 #bottomSection h3 {
-  font-weight: 200;
-  font-size: 4rem;
+  font-weight: 300;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 #bottomSection h4 {
@@ -152,20 +144,20 @@ html {
 }
 
 #bottomSection #catchtext {
-  padding: 6rem 0 0 6rem;
+  padding: 5rem 0 0 5rem;
+  width: 550px;
   background-color: white;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  position: relative;
-  left: -8vw;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 #bottomSection #catchtext div {
   width: 20vw;
 }
 
-#bottomSection #catchtext h3 {
-  text-align: center;
+#bottomSection #catchtext h3 span {
+  display: block;
 }
 
 #bottomSection #catchtext p {
