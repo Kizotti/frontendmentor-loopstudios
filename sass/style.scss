@@ -21,6 +21,39 @@ html {
 	font-size: 100%;
 }
 
+body.menu {
+  overflow: hidden;
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  z-index: 100;
+
+  transform: translateX(100%);
+  transition: transform .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  #closeMenu {
+    position: absolute;
+    top: 7rem;
+    right: 4rem;
+    cursor: pointer;
+    user-select: none;
+  }
+}
+
+
+
 #topSection:before {
   content: "\A";
   position: absolute;
@@ -40,8 +73,17 @@ html {
   background-size: cover;
   font-family: "Alata";
 
+  #burger {
+    display: none;
+    cursor: pointer;
+    user-select: none;
+
+  }
+
   & > div:first-child {
-    margin: 0 15vw;
+    margin: 0 auto;
+    padding: 0 3rem;
+    max-width: 1115px;
   }
 
   #mainTitle {
@@ -88,7 +130,7 @@ html {
           display: block;
           color: white;
           text-align: center;
-          padding: 0 1.6rem;
+          padding: 0 1rem;
         }
 
         a:hover {
@@ -185,14 +227,17 @@ html {
       color: white;
       font-family: "Josefin Sans" !important;
       font-weight: 200;
+      width: 85%;
+      height: 5rem;
     }
 
     .thumbnail {
       position: relative;
       height: 25em;
-      width: 256px;
+      width: 236px;
+      display: flex;
       // width: 20%;
-      margin: 0 0 2rem 0;
+      margin: 0 0 1.6rem 0;
     }
 
     .deep-earth {
@@ -226,6 +271,8 @@ html {
     .fisheye {
       background-image: url(../images/desktop/image-fisheye.jpg);
     }
+    
+   
 
     .margin-l {
       margin-left: 20px;
@@ -282,7 +329,54 @@ html {
 footer {
   color: white;
   background-color: black;
-  height: 30vh;
+  // height: 30vh;
+  font-family: "Josefin Sans";
+
+  img {
+    max-width: 200px;
+  }
+
+  .wrapper {
+    padding: 3rem 8rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .line {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+
+  .line div:last-child {
+    margin-top: 1rem;
+
+  }
+
+  .social {
+    display: flex;
+    justify-content: end;
+  }
+
+  .social img:not(:first-child) {
+    padding-left: .5rem;
+  }
+
+  .social img:not(:last-child) {
+    padding-right: .5rem;
+  }
+  a {
+    color: #fff;
+  }
+
+  a:not(:first-child) {
+    padding-left: 1rem;
+  }
+
+  a:not(:last-child) {
+    padding-right: 1rem;
+  }
 }
 
 
@@ -298,9 +392,134 @@ footer {
 
 //  }
 
-@media only screen and (max-width: 1150px){
+@media only screen and (max-width: 1080px){
+
+  #bottomSection {
+    max-width: 600px;
+  }
+
+  #bottomSection #history {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 0 4rem 0;
+  }
+
+  #bottomSection #catchtext {
+    padding: 2rem;
+    width: 100%;
+    background-color: white;
+    position: relative !important;
+    text-align: center;
+  }
+
+  footer .wrapper {
+    flex-direction: column;
+    padding: 3rem 3rem;
+  }
+
+  body footer .line {
+    align-items: center;
+  }
+
+  body footer .line:first-child {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+
+  body footer .line .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+
+  body footer a:not(:first-child) {
+    padding-left: 0rem;
+  }
 
 
+  body footer  a:not(:last-child) {
+    padding-right: 0rem;
+    margin-bottom: 1.5rem;
 
+  }
+
+ }
+
+ @media only screen and (max-width: 950px) {
+    #topSection #burger {
+      display: block;
+    }
+
+    #topSection ul {
+      display: none;
+    }
+ }
+
+ @media only screen and (max-width: 750px) {
+
+  #bottomSection {
+    max-width: 100%;
+  }
+
+  #bottomSection #creationsList .thumbnail {
+    position: relative;
+    height: 15rem;
+    width: 100%;
+    // width: 20%;
+    margin: 0 0 1.6rem 0;
+    background-size: cover;
+  }
+
+  #bottomSection #creationsList div {
+    position: relative;
+    top: 9.5rem;
+    z-index: 50;
+}
+
+  #bottomSection #creationsList .deep-earth {
+    background-image: url(../images/mobile/image-deep-earth.jpg);
+  }
+
+  #bottomSection  #creationsList .night-arcade {
+    background-image: url(../images/mobile/image-night-arcade.jpg);
+  }
+
+  #bottomSection  #creationsList .soccer-team {
+    background-image: url(../images/mobile/image-soccer-team.jpg);
+  }
+
+  #bottomSection  #creationsList .grid {
+    background-image: url(../images/mobile/image-grid.jpg);
+  }
+
+  #bottomSection  #creationsList .from-above {
+    background-image: url(../images/mobile/image-from-above.jpg);
+  }
+
+  #bottomSection  #creationsList .pocket-borealis {
+    background-image: url(../images/mobile/image-pocket-borealis.jpg);
+  }
+
+  #bottomSection  #creationsList .curiosity {
+    background-image: url(../images/mobile/image-curiosity.jpg);
+  }
+
+  #bottomSection  #creationsList .fisheye {
+    background-image: url(../images/mobile/image-fisheye.jpg);
+  }
+ }
+
+ @media only screen and (max-width: 570px) {
+
+  body #topSection header h1 {
+    font-size: 2rem;
+  }
+
+  body #topSection h2 {
+    font-size: 3rem;
+  }
  }
 

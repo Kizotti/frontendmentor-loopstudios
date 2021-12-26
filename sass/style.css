@@ -21,6 +21,44 @@ html {
   font-size: 100%;
 }
 
+body.menu {
+  overflow: hidden;
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  z-index: 100;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#menu.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+#menu #closeMenu {
+  position: absolute;
+  top: 7rem;
+  right: 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 #topSection:before {
   content: "\A";
   position: absolute;
@@ -42,8 +80,19 @@ html {
   font-family: "Alata";
 }
 
+#topSection #burger {
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 #topSection > div:first-child {
-  margin: 0 15vw;
+  margin: 0 auto;
+  padding: 0 3rem;
+  max-width: 1115px;
 }
 
 #topSection #mainTitle {
@@ -107,7 +156,7 @@ html {
   display: block;
   color: white;
   text-align: center;
-  padding: 0 1.6rem;
+  padding: 0 1rem;
 }
 
 #topSection header ul li a:hover::after {
@@ -211,13 +260,18 @@ html {
   color: white;
   font-family: "Josefin Sans" !important;
   font-weight: 200;
+  width: 85%;
+  height: 5rem;
 }
 
 #bottomSection #creationsList .thumbnail {
   position: relative;
   height: 25em;
-  width: 256px;
-  margin: 0 0 2rem 0;
+  width: 236px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 1.6rem 0;
 }
 
 #bottomSection #creationsList .deep-earth {
@@ -306,6 +360,194 @@ html {
 footer {
   color: white;
   background-color: black;
-  height: 30vh;
+  font-family: "Josefin Sans";
+}
+
+footer img {
+  max-width: 200px;
+}
+
+footer .wrapper {
+  padding: 3rem 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .line div:last-child {
+  margin-top: 1rem;
+}
+
+footer .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+footer .social img:not(:first-child) {
+  padding-left: .5rem;
+}
+
+footer .social img:not(:last-child) {
+  padding-right: .5rem;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer a:not(:first-child) {
+  padding-left: 1rem;
+}
+
+footer a:not(:last-child) {
+  padding-right: 1rem;
+}
+
+@media only screen and (max-width: 1080px) {
+  #bottomSection {
+    max-width: 600px;
+  }
+  #bottomSection #history {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 4rem 0 4rem 0;
+  }
+  #bottomSection #catchtext {
+    padding: 2rem;
+    width: 100%;
+    background-color: white;
+    position: relative !important;
+    text-align: center;
+  }
+  footer .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 3rem 3rem;
+  }
+  body footer .line {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body footer .line:first-child {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 3rem;
+  }
+  body footer .line .footer-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 0;
+  }
+  body footer a:not(:first-child) {
+    padding-left: 0rem;
+  }
+  body footer a:not(:last-child) {
+    padding-right: 0rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  #topSection #burger {
+    display: block;
+  }
+  #topSection ul {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #bottomSection {
+    max-width: 100%;
+  }
+  #bottomSection #creationsList .thumbnail {
+    position: relative;
+    height: 15rem;
+    width: 100%;
+    margin: 0 0 1.6rem 0;
+    background-size: cover;
+  }
+  #bottomSection #creationsList div {
+    position: relative;
+    top: 9.5rem;
+    z-index: 50;
+  }
+  #bottomSection #creationsList .deep-earth {
+    background-image: url(../images/mobile/image-deep-earth.jpg);
+  }
+  #bottomSection #creationsList .night-arcade {
+    background-image: url(../images/mobile/image-night-arcade.jpg);
+  }
+  #bottomSection #creationsList .soccer-team {
+    background-image: url(../images/mobile/image-soccer-team.jpg);
+  }
+  #bottomSection #creationsList .grid {
+    background-image: url(../images/mobile/image-grid.jpg);
+  }
+  #bottomSection #creationsList .from-above {
+    background-image: url(../images/mobile/image-from-above.jpg);
+  }
+  #bottomSection #creationsList .pocket-borealis {
+    background-image: url(../images/mobile/image-pocket-borealis.jpg);
+  }
+  #bottomSection #creationsList .curiosity {
+    background-image: url(../images/mobile/image-curiosity.jpg);
+  }
+  #bottomSection #creationsList .fisheye {
+    background-image: url(../images/mobile/image-fisheye.jpg);
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  body #topSection header h1 {
+    font-size: 2rem;
+  }
+  body #topSection h2 {
+    font-size: 3rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
