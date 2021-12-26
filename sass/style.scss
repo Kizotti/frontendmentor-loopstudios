@@ -111,7 +111,8 @@ html {
 
 #bottomSection {
   font-family: "Josefin Sans" !important;
-  max-width: 1200px;
+  padding: 0 3rem;
+  max-width: 1115px;
   margin: 0 auto;
 
 	#history {
@@ -149,6 +150,8 @@ html {
 
   #catchtext p {
     font-family: "Alata";
+    color: #656565;
+    line-height: 1.6;
   }
 
   #creationsTitle {
@@ -172,13 +175,13 @@ html {
     margin-top: 5vh;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 
     div {
       position: relative;
-      top: -10rem;
-      left: 4rem;
-      font-size: 3rem;
+      top: 19.5rem;
+      left: 1.5rem;
+      font-size: 2.2rem;
       color: white;
       font-family: "Josefin Sans" !important;
       font-weight: 200;
@@ -186,9 +189,50 @@ html {
 
     .thumbnail {
       position: relative;
-      height: 450px;
+      height: 25em;
       width: 256px;
-      margin: 20px;
+      // width: 20%;
+      margin: 0 0 2rem 0;
+    }
+
+    .deep-earth {
+      background-image: url(../images/desktop/image-deep-earth.jpg);
+    }
+
+    .night-arcade {
+      background-image: url(../images/desktop/image-night-arcade.jpg);
+    }
+
+    .soccer-team {
+      background-image: url(../images/desktop/image-soccer-team.jpg);
+    }
+
+    .grid {
+      background-image: url(../images/desktop/image-grid.jpg);
+    }
+
+    .from-above {
+      background-image: url(../images/desktop/image-from-above.jpg);
+    }
+
+    .pocket-borealis {
+      background-image: url(../images/desktop/image-pocket-borealis.jpg);
+    }
+
+    .curiosity {
+      background-image: url(../images/desktop/image-curiosity.jpg);
+    }
+
+    .fisheye {
+      background-image: url(../images/desktop/image-fisheye.jpg);
+    }
+
+    .margin-l {
+      margin-left: 20px;
+    }
+
+    .margin-r {
+      margin-right: 20px;
     }
 
     .thumbnail:hover div {
@@ -197,7 +241,7 @@ html {
     }
 
     .thumbnail img {
-      width: 100%;
+      height: 100%;
       vertical-align: top;
 
       &:hover {
@@ -240,3 +284,23 @@ footer {
   background-color: black;
   height: 30vh;
 }
+
+
+// @media only screen and (min-width: 320px) and (max-width: 479px){
+
+//  }
+
+// @media only screen and (min-width: 480px) and (max-width: 767px){
+
+//  }
+
+// @media only screen and (min-width: 768px) and (max-width: 991px){
+
+//  }
+
+@media only screen and (max-width: 1150px){
+
+
+
+ }
+
